@@ -1,0 +1,1 @@
+console.log("Ambiente configurado! Bem-vindo à Arena RPG.");
