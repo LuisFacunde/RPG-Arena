@@ -1,6 +1,6 @@
 import { ClassePersonagem } from "../enums/enums";
 import { Item } from "../interfaces/interfaces";
-import { PersonagemMortoError, IventarioCheioError } from "../errors/errors";
+import { PersonagemMortoError, InventarioCheioError } from "../errors/errors";
 
 export abstract class Personagem {
     private _vida: number;
@@ -55,7 +55,7 @@ export abstract class Personagem {
         }
 
         if (alvo.estaVivo() === false) {
-            throw new PersonagemMortoError(`${this.nome} está morto e não pode ser atacado.`)
+            throw new PersonagemMortoError(`${alvo.nome} está morto e não pode ser atacado.`)
         }
 
         const dano = Math.max(0, this.ataque - alvo.defesa)
@@ -76,7 +76,7 @@ export abstract class Personagem {
 
     public adicionarItem(item: Item): void {
         if (this._inventario.length >= 5) {
-            throw new IventarioCheioError();
+            throw new InventarioCheioError();
         }
         this._inventario.push(item);
         console.log(`${item.nome} foi adicionado ao inventário de ${this.nome}.`);

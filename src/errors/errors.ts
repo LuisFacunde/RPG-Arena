@@ -13,9 +13,9 @@ export class ManaInsuficienteError extends Error {
     }
 }
 
-export class IventarioCheioError extends Error {
+export class InventarioCheioError extends Error {
     constructor(message: string = "Seu inventário está cheio!") {
         super(message)
-        this.name = "IventarioCheioError";
+        this.name = "InventarioCheioError";
     }
 }
