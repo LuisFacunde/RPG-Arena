@@ -12,6 +12,20 @@ export class Arqueiro extends Personagem {
         this._manaMaxima = 50;
     }
 
+    public get mana(): number {
+        return this._mana;
+    }
+
+    public set mana(mana: number) {
+        if (mana > this._manaMaxima) {
+            this._mana = this._manaMaxima;
+        } else if (mana < 0) {
+            this._mana = 0;
+        } else {
+            this._mana = mana;
+        }
+    }
+
     public atacar(alvo: Personagem): number {
         if (this.estaVivo() === false) {
             throw new PersonagemMortoError(`${this.nome} está morto e não pode atacar.`);
