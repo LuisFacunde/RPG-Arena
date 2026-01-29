@@ -89,7 +89,7 @@ export abstract class Personagem {
 
         const item = this._inventario[indice]!;
         console.log(`${this.nome} usou ${item.nome}.`);
-        item.usar();
+        item.usar(this);
 
         this._inventario.splice(indice, 1);
     }

@@ -16,7 +16,6 @@ export class Arqueiro extends Personagem {
         if (this.estaVivo() === false) {
             throw new PersonagemMortoError(`${this.nome} está morto e não pode atacar.`);
         }
-
         if (alvo.estaVivo() === false) {
             throw new PersonagemMortoError(`${alvo.nome} está morto e não pode ser atacado.`);
         }
