@@ -1,1 +1,1 @@
-console.log("Ambiente configurado! Bem-vindo à Arena RPG.");
+console.log("Ambiente configurado.");
