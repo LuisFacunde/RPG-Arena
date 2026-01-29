@@ -50,7 +50,7 @@ export abstract class Personagem {
     }
 
     public atacar(alvo: Personagem): number {
-        if (alvo.estaVivo() === false) {
+        if (this.estaVivo() === false) {
             throw new PersonagemMortoError(`${this.nome} está morto e não pode atacar.`)
         }
 
