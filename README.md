@@ -23,6 +23,9 @@ Este projeto consiste em um sistema de batalha RPG simples, criado com o propós
 ## Como Executar
 
 1.  Clone o repositório.
+    ```bash
+    git clone https://github.com/LuisFacunde/RPG-Arena.git
+    ```
 2.  Instale as dependências:
     ```bash
     npm install
