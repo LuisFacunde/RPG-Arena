@@ -47,7 +47,7 @@ while (conan.estaVivo() && harryPotter.estaVivo()) {
 
     try {
         if (conan.estaVivo() && harryPotter.estaVivo()) {
-            Math.random() < 0.3 ? conan.golpeBrutal(harryPotter) : conan.atacar(harryPotter);
+            Math.random() < 0.2 ? conan.golpeBrutal(harryPotter) : conan.atacar(harryPotter);
         }
     } catch (error: any) {
         console.log(`Erro Conan: ${error.message}`);
@@ -66,11 +66,11 @@ console.log(`${perdedorBatalha1.nome} foi eliminado.`);
 console.log("\n... O vencedor se prepara para o Desafio Final ... \n");
 
 if (vencedorBatalha1 instanceof Mago) {
-    vencedorBatalha1.vida = 70;
+    vencedorBatalha1.curar(50);
     vencedorBatalha1.mana = 100;
     vencedorBatalha1.adicionarItem(new PocaoVida());
 } else if (vencedorBatalha1 instanceof Guerreiro) {
-    vencedorBatalha1.vida = 100;
+    vencedorBatalha1.curar(50);
     vencedorBatalha1.adicionarItem(new PocaoVida());
 }
 
