@@ -63,7 +63,7 @@ export class Arqueiro extends Personagem {
         this._mana = this._mana - 15;
         console.log(`${this.nome} usou FLECHA PRECISA! (Mana restante: ${this._mana})`);
 
-        const dano = this.ataque + 9;
+        const dano = this.ataque + 10;
 
         alvo.vida = alvo.vida - dano;
         console.log(`${alvo.nome} sofreu ${dano} de dano de FLECHA PRECISA! Lançada por ${this.nome}`);

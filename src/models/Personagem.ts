@@ -41,6 +41,10 @@ export abstract class Personagem {
         }
     }
 
+    public get inventario(): Item[] {
+        return this._inventario;
+    }
+
     public estaVivo(): boolean {
         if (this._vida > 0) {
             return true;

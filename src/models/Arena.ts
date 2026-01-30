@@ -17,7 +17,6 @@ export class Arena {
         this.lutadores.forEach(lutador => {
             console.log(`${lutador.nome} | Classe: ${lutador.classe} | Vida: ${lutador.vida} | Ataque: ${lutador.ataque} | Defesa: ${lutador.defesa}`);
         })
-        console.log("----------------------------\n");
     }
 
     public buscarLutador(nomeParticipante: string): Personagem {
